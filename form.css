@@ -1,0 +1,50 @@
+.formbox{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content:center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 3px solid purple;
+    box-shadow: 0px 0px 10px 5px violet ; */
+}
+
+.formbox label{
+    text-align: center;
+    
+    text-shadow: 1px 1px 1px aliceblue;
+    background-image: url(./Pics/star.png);
+}
+
+.formbox button{
+    align-self: center;
+    height: 100px;
+    width: 100px;
+    border: none;
+    background-color: transparent;
+    background-image: url(./Pics/astromoon.png);
+    background-size: cover;
+    color: darkblue;
+    border-radius: 100%;
+}
+.formbox button:hover{
+    transition: 0.4s;
+    align-self: center;
+    height: 100px;
+    width: 100px;
+    border: none;
+    background-color: transparent;
+    background-image: url(./Pics/moonlandng.png);
+    background-size: cover;
+    color: darkmagenta;
+    border-radius: 25%;
+}
+
+.formbox button::after{
+    background-color: brown;
+    color: cadetblue;
+
+}
