@@ -1,10 +1,11 @@
 .planetrotate{
     height: 200px;
     width: 200px;
-    position: absolute;
+    position: relative;
     display: flex;
-    flex-wrap: inherit;
+    flex-wrap: wrap;
     animation: rotation 10s infinite linear;
+
     transition: all .4s ease-in-out;
   }
   @keyframes rotation{
@@ -12,22 +13,23 @@
         transform: rotate(0deg);
     }
     to{
-        transform: rotate(359deg);
+        transform: rotate(360deg);
     }
   }
 
 .planetrotate.big{
+    height: auto;
+    width: 100%;
+    top: -50vw;
+    left: 0px;
     display: flex;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
 }
 
 .planetrotate img{
     position: relative;
     display: inline-block;
-    height: 100%;
+    height: auto;
     width: 100%;
     font-size: 30px;
 }
@@ -43,84 +45,16 @@
 }
 
 .planetrotate.sun{
-    height: 750px;
-    width: 750px;
-    right: calc(50vw - 375px);
-    top: calc(50vw - 375px);
+    height: auto;
+    width: 25%;
+    left: calc(50vw - 12.5%);
+    top: calc(50vh - 12.5%);
+    transform: none;
 }
-.mercury{
-    right: 50vw;
-    top: 500px;
+.planetrotate.big:hover{
+    transform: none !important;
 }
-.venus{
-    right: 50vw;
-    top: 1000px;
-}
-.earth{
-    right: 50vw;
-    top: 1500px;
-}
-.earth.gallery{
-    
-}
-@keyframe earthOrbit{
-    %10{
 
-    }
-    ½20{
-
-    }
-    ½30{
-
-    }
-    ½40{
-
-    }
-    ½50{
-
-    }
-    ½60{
-
-    }
-    ½70{
-
-    }
-    ½80{
-
-    }
-    ½90{
-
-    }
-    ½100{
-
-    }
-}
-.moon{
-    right: 50vw;
-    top: 1750px;
-    margin-top: 10px;
-}
-.mars{
-    right: 50vw;
-    top: 2000px;
-}
-.jupiter{
-    right: 50vw;
-    top: 2500px;
-}
-.saturn{
-    right: 50vw;
-    top: 3000px;
-}
-.uranus{
-    right: 50vw;
-    top: 3500px;
-}
-.neptun{
-    right: 50vw;
-    top: 4000px;
-}
-.pluto{
-    right: 50vw;
-    top: 4500px;
-}
+.planetrotate.moon{
+    position: absolute;
+} 

@@ -1,19 +1,39 @@
 
 body{
     background-image: url("./Pics/bgspc.gif");
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    
 }
 
-.aurora{
-    display: flex;z
-    width: device-width;
-}
-
-.emptyframe{
+.planetbender{
     display: flex;
+    height: 1500pc;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.planetbender .planetrotate{
+    width: 40%;
+    height: auto;
+}
+
+/* .aurora{
+    display: flex;
+    width: device-width;
+} */
+
+.planetrotate.previous{
+    position: fixed;
+    width: 50px;
+    height: auto;
+    z-index: 999;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.planetrotate.previous:hover{
+    transform: translateY(-50%);
 }
 
 .boxdeneme{
@@ -41,7 +61,7 @@ body{
 
 .bottom{
     right: inherit; 
-    top: 9999px;
+    bottom: 0px;
 }
 
 .transformdblock{

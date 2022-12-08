@@ -1,22 +1,488 @@
 
-.bg{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    border: 3px solid purple;
-
-    background-image: linear-gradient(
-    -65deg, 
-      rgba(59,173,227,1) 0%, 
-      rgba(87,111,230,1) 25%, 
-      rgb(68, 183, 112) 51%, 
-      rgb(53, 255, 80) 100%
-    )
+.mercuryOrbit{
+  left:50px; top: 50px;
+  position: absolute;
+  animation-duration: 3.65s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: mercOrbit;
 }
-
-.gallerybox{
-display: flex;
-flex-wrap: wrap;
-justify-content: space-evenly;
-align-content: space-around;
+@keyframes mercOrbit{
+    0%{
+      transform: rotate(0deg) translateX(210px) rotate(0deg);
+    }
+    /* 10%{
+      left: 51vw; top: 51px;
+    }
+    20%{
+      left:52vw; top: 52px;
+    }
+    30%{
+      left:53vw; top: 53px;
+    }
+    40%{
+      left:70vw; top: 70px;
+    }
+    50%{
+      left:75vw; top: 75px;
+    }
+    60%{
+      left:80vw; top: 80px;
+    }
+    70%{
+      left:85vw; top: 85px;
+    }
+    80%{
+      left:90vw; top: 90px;
+    }
+    90%{
+      left: 95vw; top: 95px;
+    } */
+    100%{
+      transform: rotate(360deg) translateX(210px) rotate(-360deg);
+    }
+  }
+  
+.venusOrbit{
+  left:500px; top: 50px;
+  position: absolute;
+  animation-duration: 3.65s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: vOrbit;
 }
+@keyframes vOrbit{
+    0%{
+      transform: rotate(0deg) translateX(210px) rotate(0deg);
+    }
+    /* 10%{
+      left: 51vw; top: 51px;
+    }
+    20%{
+      left:52vw; top: 52px;
+    }
+    30%{
+      left:53vw; top: 53px;
+    }
+    40%{
+      left:70vw; top: 70px;
+    }
+    50%{
+      left:75vw; top: 75px;
+    }
+    60%{
+      left:80vw; top: 80px;
+    }
+    70%{
+      left:85vw; top: 85px;
+    }
+    80%{
+      left:90vw; top: 90px;
+    }
+    90%{
+      left: 95vw; top: 95px;
+    } */
+    100%{
+      transform: rotate(360deg) translateX(210px) rotate(-360deg);
+    }
+  }
+
+.earthOrbit{
+  left:50px; top: 50px;
+  position: absolute;
+  animation-duration: 3.65s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: eOrbit;
+}
+@keyframes eOrbit{
+    0%{
+      transform: rotate(0deg) translateX(210px) rotate(0deg);
+    }
+    /* 10%{
+      left: 51vw; top: 51px;
+    }
+    20%{
+      left:52vw; top: 52px;
+    }
+    30%{
+      left:53vw; top: 53px;
+    }
+    40%{
+      left:70vw; top: 70px;
+    }
+    50%{
+      left:75vw; top: 75px;
+    }
+    60%{
+      left:80vw; top: 80px;
+    }
+    70%{
+      left:85vw; top: 85px;
+    }
+    80%{
+      left:90vw; top: 90px;
+    }
+    90%{
+      left: 95vw; top: 95px;
+    } */
+    100%{
+      transform: rotate(360deg) translateX(210px) rotate(-360deg);
+    }
+  }
+
+  .marsOrbit{
+    left:50px; top: 50px;
+    position: absolute;
+    animation-duration: 3.65s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-fill-mode: none;
+      animation-play-state: running;
+      animation-name: maOrbit;
+  }
+  @keyframes maOrbit{
+      0%{
+        transform: rotate(0deg) translateX(210px) rotate(0deg);
+      }
+      /* 10%{
+        left: 51vw; top: 51px;
+      }
+      20%{
+        left:52vw; top: 52px;
+      }
+      30%{
+        left:53vw; top: 53px;
+      }
+      40%{
+        left:70vw; top: 70px;
+      }
+      50%{
+        left:75vw; top: 75px;
+      }
+      60%{
+        left:80vw; top: 80px;
+      }
+      70%{
+        left:85vw; top: 85px;
+      }
+      80%{
+        left:90vw; top: 90px;
+      }
+      90%{
+        left: 95vw; top: 95px;
+      } */
+      100%{
+        transform: rotate(360deg) translateX(210px) rotate(-360deg);
+        z-index: -1;
+      }
+    }
+
+.marsOrbit{
+    left:50px; top: 50px;
+    position: absolute;
+    animation-duration: 3.65s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-fill-mode: none;
+      animation-play-state: running;
+      animation-name: maOrbit;
+  }
+  @keyframes maOrbit{
+      0%{
+        transform: rotate(0deg) translateX(210px) rotate(0deg);
+      }
+      /* 10%{
+        left: 51vw; top: 51px;
+      }
+      20%{
+        left:52vw; top: 52px;
+      }
+      30%{
+        left:53vw; top: 53px;
+      }
+      40%{
+        left:70vw; top: 70px;
+      }
+      50%{
+        left:75vw; top: 75px;
+      }
+      60%{
+        left:80vw; top: 80px;
+      }
+      70%{
+        left:85vw; top: 85px;
+      }
+      80%{
+        left:90vw; top: 90px;
+      }
+      90%{
+        left: 95vw; top: 95px;
+      } */
+      100%{
+        transform: rotate(360deg) translateX(210px) rotate(-360deg);
+        z-index: -1;
+      }
+    }
+
+
+    .jupiterOrbit{
+      left:50px; top: 50px;
+      position: absolute;
+      animation-duration: 3.65s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation-play-state: running;
+        animation-name: jOrbit;
+    }
+    @keyframes jOrbit{
+        0%{
+          transform: rotate(0deg) translateX(210px) rotate(0deg);
+        }
+        /* 10%{
+          left: 51vw; top: 51px;
+        }
+        20%{
+          left:52vw; top: 52px;
+        }
+        30%{
+          left:53vw; top: 53px;
+        }
+        40%{
+          left:70vw; top: 70px;
+        }
+        50%{
+          left:75vw; top: 75px;
+        }
+        60%{
+          left:80vw; top: 80px;
+        }
+        70%{
+          left:85vw; top: 85px;
+        }
+        80%{
+          left:90vw; top: 90px;
+        }
+        90%{
+          left: 95vw; top: 95px;
+        } */
+        100%{
+          transform: rotate(360deg) translateX(210px) rotate(-360deg);
+        }
+      }
+
+
+      .saturnOrbit{
+        left:50px; top: 50px;
+        position: absolute;
+        animation-duration: 3.65s;
+          animation-timing-function: linear;
+          animation-delay: 0s;
+          animation-iteration-count: infinite;
+          animation-direction: normal;
+          animation-fill-mode: none;
+          animation-play-state: running;
+          animation-name: sOrbit;
+      }
+      @keyframes sOrbit{
+          0%{
+            transform: rotate(0deg) translateX(210px) rotate(0deg);
+          }
+          /* 10%{
+            left: 51vw; top: 51px;
+          }
+          20%{
+            left:52vw; top: 52px;
+          }
+          30%{
+            left:53vw; top: 53px;
+          }
+          40%{
+            left:70vw; top: 70px;
+          }
+          50%{
+            left:75vw; top: 75px;
+          }
+          60%{
+            left:80vw; top: 80px;
+          }
+          70%{
+            left:85vw; top: 85px;
+          }
+          80%{
+            left:90vw; top: 90px;
+          }
+          90%{
+            left: 95vw; top: 95px;
+          } */
+          100%{
+            transform: rotate(360deg) translateX(210px) rotate(-360deg);
+          }
+        }
+
+
+        .uranusOrbit{
+          left:50px; top: 50px;
+          position: absolute;
+          animation-duration: 3.65s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-fill-mode: none;
+            animation-play-state: running;
+            animation-name: urOrbit;
+        }
+        @keyframes urOrbit{
+            0%{
+              transform: rotate(0deg) translateX(210px) rotate(0deg);
+            }
+            /* 10%{
+              left: 51vw; top: 51px;
+            }
+            20%{
+              left:52vw; top: 52px;
+            }
+            30%{
+              left:53vw; top: 53px;
+            }
+            40%{
+              left:70vw; top: 70px;
+            }
+            50%{
+              left:75vw; top: 75px;
+            }
+            60%{
+              left:80vw; top: 80px;
+            }
+            70%{
+              left:85vw; top: 85px;
+            }
+            80%{
+              left:90vw; top: 90px;
+            }
+            90%{
+              left: 95vw; top: 95px;
+            } */
+            100%{
+              transform: rotate(360deg) translateX(210px) rotate(-360deg);
+            }
+          }
+
+
+
+          .neptuneOrbit{
+            left:50px; top: 50px;
+            position: absolute;
+            animation-duration: 3.65s;
+              animation-timing-function: linear;
+              animation-delay: 0s;
+              animation-iteration-count: infinite;
+              animation-direction: normal;
+              animation-fill-mode: none;
+              animation-play-state: running;
+              animation-name: nepOrbit;
+          }
+          @keyframes nepOrbit{
+              0%{
+                transform: rotate(0deg) translateX(210px) rotate(0deg);
+              }
+              /* 10%{
+                left: 51vw; top: 51px;
+              }
+              20%{
+                left:52vw; top: 52px;
+              }
+              30%{
+                left:53vw; top: 53px;
+              }
+              40%{
+                left:70vw; top: 70px;
+              }
+              50%{
+                left:75vw; top: 75px;
+              }
+              60%{
+                left:80vw; top: 80px;
+              }
+              70%{
+                left:85vw; top: 85px;
+              }
+              80%{
+                left:90vw; top: 90px;
+              }
+              90%{
+                left: 95vw; top: 95px;
+              } */
+              100%{
+                transform: rotate(360deg) translateX(210px) rotate(-360deg);
+              }
+            }
+
+
+            .plutoOrbit{
+              left:50px; top: 50px;
+              position: absolute;
+              animation-duration: 3.65s;
+                animation-timing-function: linear;
+                animation-delay: 0s;
+                animation-iteration-count: infinite;
+                animation-direction: normal;
+                animation-fill-mode: none;
+                animation-play-state: running;
+                animation-name: pluOrbit;
+            }
+            @keyframes pluOrbit{
+                0%{
+                  transform: rotate(0deg) translateX(210px) rotate(0deg);
+                }
+                /* 10%{
+                  left: 51vw; top: 51px;
+                }
+                20%{
+                  left:52vw; top: 52px;
+                }
+                30%{
+                  left:53vw; top: 53px;
+                }
+                40%{
+                  left:70vw; top: 70px;
+                }
+                50%{
+                  left:75vw; top: 75px;
+                }
+                60%{
+                  left:80vw; top: 80px;
+                }
+                70%{
+                  left:85vw; top: 85px;
+                }
+                80%{
+                  left:90vw; top: 90px;
+                }
+                90%{
+                  left: 95vw; top: 95px;
+                } */
+                100%{
+                  transform: rotate(360deg) translateX(210px) rotate(-360deg);
+                }
+              }
