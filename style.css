@@ -1,38 +1,69 @@
-
 body{
     background-image: url("./Pics/bgspc.gif");
     scroll-behavior: smooth;
     overflow-x: hidden;
-    
 }
 
-.planetbender{
-    display: flex;
-    height: 1500pc;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.planetbender .planetrotate{
-    width: 40%;
-    height: auto;
-}
-
-/* .aurora{
-    display: flex;
-    width: device-width;
-} */
-
-.planetrotate.previous{
-    position: fixed;
+.astronaut{
     width: 50px;
     height: auto;
-    z-index: 999;
     top: 50%;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    animation: rotation 20s infinite linear;
+    transition: all .4s ease-in-out;
+  }
+  @keyframes rotation{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.astronaut:hover{
+    filter:
+    drop-shadow(0 0 6px whitesmoke)
+    drop-shadow(-1px 0 6px darkgray)
+    drop-shadow(0 -1px 8px gray)
+    drop-shadow(0 0 15px transparent);
+
     transform: translateY(-50%);
 }
-.planetrotate.previous:hover{
+
+.solarSystem{
+    width: 150px;
+    height: auto;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    animation: solarrotation 20s infinite linear;
+    transition: all .4s ease-in-out;
+  }
+  @keyframes solarrotation{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.solarSystem img{
+    height: auto;
+    width: 100%;
+}
+.solarSystem:hover{
+    filter:
+    drop-shadow(0 0 6px whitesmoke)
+    drop-shadow(-1px 0 6px darkgray)
+    drop-shadow(0 -1px 8px gray)
+    drop-shadow(0 0 15px transparent);
+
     transform: translateY(-50%);
 }
 
@@ -67,6 +98,14 @@ body{
 .transformdblock{
     transform: rotate(90dec); /* tüm alanı çevirir */
 }
+
+
+
+.reflect {
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(255, 255, 255, 0.295), rgba(255, 255, 255, 0.737));
+  }
+
+
 
 /* ____________cursor_____________ */
 

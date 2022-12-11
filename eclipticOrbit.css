@@ -1,0 +1,112 @@
+.ellipse  {
+    width: 30%;
+    height: auto;
+    transform: scaleX(3);
+    /* background-color: blue; */
+    left: calc(50vw - 15%);
+    top: calc(50vh - 25%);
+    position: relative;
+    border-radius: 50%;
+    animation: zind 5s infinite linear; 
+}
+@keyframes zind{
+    0%{
+        z-index: -1;
+        border-color: aliceblue;
+    }
+    40%{background-color: transparent;
+        z-index: -1;
+    }
+    75%{
+        z-index: 1;
+      border-color: transparent;
+
+    }
+    100%{
+        z-index: 1;
+    }
+}
+
+.rotate {
+    width: 100%;
+    height: 100%;
+    animation: circle 5s infinite linear;    
+    transform-origin: 50% 50%;
+}
+.counterrotate {
+    width: 50px;
+    height: 50px;
+    animation: ccircle 5s infinite linear;    
+}
+.innerCube{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: block;
+    transform: scaleX(0.33);
+}
+
+@keyframes circle {
+    0%{transform: rotateZ(0deg)}
+    25%{transform: rotateZ(90deg)}
+    50%{transform: rotateZ(180deg)}
+    75%{transform: rotateZ(270deg)}
+    100%{transform: rotateZ(360deg)}
+}
+
+@keyframes ccircle {
+    0%{transform: rotateZ(360deg)}
+    25%{transform: rotateZ(270deg)}
+    50%{transform: rotateZ(180deg)}
+    75%{transform: rotateZ(90deg)}
+    100%{transform: rotateZ(0deg)}
+}
+
+.ellipseMoon {
+    width: 300%;
+    height: auto;
+    transform: scaleX(3);
+    background-color: transparent;
+    position: relative;
+    border-radius: 50%;
+    animation: zindMoon 13s infinite linear; 
+}
+@keyframes zindMoon{
+    0%{
+        z-index: -1;
+    }
+    25%{
+        z-index: -1;
+    }
+    50%{
+        z-index: -1;
+    }
+    75%{
+        z-index: -1;
+    }
+    100%{
+        z-index: -1;
+    }
+}
+.rotateMoon {
+    width: 100%;
+    height: 100%;
+    animation: circle 13s infinite linear;    
+    transform-origin: 50% 50%;
+}
+.counterrotateMoon {
+    width: 150px;
+    height: 150px;
+    animation: ccircle 13s infinite linear;    
+}
+.innerCubeMoon{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: block;
+    transform: scaleX(0.33);
+}

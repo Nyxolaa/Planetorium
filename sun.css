@@ -1,0 +1,73 @@
+.sunRotate{
+  height: 200px;
+  width: 200px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  animation: rotation 40s infinite linear;
+  transition: all .4s ease-in-out;
+}
+@keyframes rotation{
+  from {
+      transform: rotate(0deg);
+  }
+  to{
+      transform: rotate(360deg);
+  }
+}
+
+.sunRotate.big{
+  height: auto;
+    width: 100%;
+    top: -50vw;
+    left: 0px;
+    display: flex;
+    position: relative;
+}
+
+.sunRotate img{
+  position: relative;
+  display: inline-block;
+  height: auto;
+  width: 100%;
+}
+
+.sunRotate:hover{
+  filter:
+    drop-shadow(0 0 1px red)
+    drop-shadow(-1px 0 1px transparent)
+    drop-shadow(0 -1px 2px transparent)
+    drop-shadow(0 0 5px transparent);
+    transform: scale(1.1) rotate(-25deg);
+    cursor: pointer;
+}
+.sunRotate.big:hover{
+  transform: none !important;
+}
+
+.sunRotate.gallery{
+    height: auto;
+    width: 25%;
+    left: calc(50vw - 12.5%);
+    top: calc(50vh - 12.5%);
+    transform: none;
+    /* position: sticky !important; */
+}
+
+.moonRotate{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    animation: rotation 10s infinite linear;
+    transition: .2s ease-in-out;
+  }
+  @keyframes rotation{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

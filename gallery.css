@@ -1,488 +1,407 @@
-
-.mercuryOrbit{
-  left:50px; top: 50px;
-  position: absolute;
-  animation-duration: 3.65s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: none;
-    animation-play-state: running;
-    animation-name: mercOrbit;
+.orbitCenter{
+  height: 60vh;
+  width: 50vw;
+  display: block;
+  /* justify-content: center;
+  align-items: center; */
+  /* border: 5px solid white; */
 }
-@keyframes mercOrbit{
-    0%{
-      transform: rotate(0deg) translateX(210px) rotate(0deg);
-    }
-    /* 10%{
-      left: 51vw; top: 51px;
-    }
-    20%{
-      left:52vw; top: 52px;
-    }
-    30%{
-      left:53vw; top: 53px;
-    }
-    40%{
-      left:70vw; top: 70px;
-    }
-    50%{
-      left:75vw; top: 75px;
-    }
-    60%{
-      left:80vw; top: 80px;
-    }
-    70%{
-      left:85vw; top: 85px;
-    }
-    80%{
-      left:90vw; top: 90px;
-    }
-    90%{
-      left: 95vw; top: 95px;
-    } */
-    100%{
-      transform: rotate(360deg) translateX(210px) rotate(-360deg);
-    }
-  }
-  
-.venusOrbit{
-  left:500px; top: 50px;
-  position: absolute;
-  animation-duration: 3.65s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: none;
-    animation-play-state: running;
-    animation-name: vOrbit;
+
+.ellipseVenus  {
+  width: 35%;
+  height: auto;
+  transform: scaleX(3);
+  /* background-color: white; */
+  left: calc(50vw - 15%);
+  top: calc(50vh - 32%);
+  position: relative;
+  border-radius: 50%;
+  animation: zindVenus 7s infinite linear; 
 }
-@keyframes vOrbit{
-    0%{
-      transform: rotate(0deg) translateX(210px) rotate(0deg);
-    }
-    /* 10%{
-      left: 51vw; top: 51px;
-    }
-    20%{
-      left:52vw; top: 52px;
-    }
-    30%{
-      left:53vw; top: 53px;
-    }
-    40%{
-      left:70vw; top: 70px;
-    }
-    50%{
-      left:75vw; top: 75px;
-    }
-    60%{
-      left:80vw; top: 80px;
-    }
-    70%{
-      left:85vw; top: 85px;
-    }
-    80%{
-      left:90vw; top: 90px;
-    }
-    90%{
-      left: 95vw; top: 95px;
-    } */
-    100%{
-      transform: rotate(360deg) translateX(210px) rotate(-360deg);
-    }
+@keyframes zindVenus{
+  0%{
+      z-index: -2;
+      border-color: aliceblue;
   }
-
-.earthOrbit{
-  left:50px; top: 50px;
-  position: absolute;
-  animation-duration: 3.65s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: none;
-    animation-play-state: running;
-    animation-name: eOrbit;
+  40%{
+      z-index: -2;
+  }
+  80%{
+      z-index: 2;
+      border-color: transparent;
+  }
+  100%{
+      z-index: 2;
+  }
 }
-@keyframes eOrbit{
-    0%{
-      transform: rotate(0deg) translateX(210px) rotate(0deg);
-    }
-    /* 10%{
-      left: 51vw; top: 51px;
-    }
-    20%{
-      left:52vw; top: 52px;
-    }
-    30%{
-      left:53vw; top: 53px;
-    }
-    40%{
-      left:70vw; top: 70px;
-    }
-    50%{
-      left:75vw; top: 75px;
-    }
-    60%{
-      left:80vw; top: 80px;
-    }
-    70%{
-      left:85vw; top: 85px;
-    }
-    80%{
-      left:90vw; top: 90px;
-    }
-    90%{
-      left: 95vw; top: 95px;
-    } */
-    100%{
-      transform: rotate(360deg) translateX(210px) rotate(-360deg);
-    }
+.venusrotate {
+  width: 100%;
+  height: 100%;
+  animation: circle 7s infinite linear;    
+  transform-origin: 50% 50%;
+}
+.venuscounterrotate {
+  width: 50px;
+  height: 50px;
+  animation: ccircle 7s infinite linear;    
+}
+.venusinnerCube{
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+  transform: scaleX(0.33);
+}
+
+.ellipseEarth  {
+  width: 40%;
+  height: auto;
+  transform: scaleX(3);
+  /* background-color: greenyellow; */
+  left: calc(50vw - 15%);
+  top: calc(50vh - 40%);
+  position: relative;
+  border-radius: 50%;
+  animation: zindEarth 8.5s infinite linear; 
+}
+@keyframes zindEarth{
+  0%{
+      z-index: -3;
+      border-color: aliceblue;
+
   }
-
-  .marsOrbit{
-    left:50px; top: 50px;
-    position: absolute;
-    animation-duration: 3.65s;
-      animation-timing-function: linear;
-      animation-delay: 0s;
-      animation-iteration-count: infinite;
-      animation-direction: normal;
-      animation-fill-mode: none;
-      animation-play-state: running;
-      animation-name: maOrbit;
+  40%{background-color: transparent;
+      z-index: -3;
   }
-  @keyframes maOrbit{
-      0%{
-        transform: rotate(0deg) translateX(210px) rotate(0deg);
-      }
-      /* 10%{
-        left: 51vw; top: 51px;
-      }
-      20%{
-        left:52vw; top: 52px;
-      }
-      30%{
-        left:53vw; top: 53px;
-      }
-      40%{
-        left:70vw; top: 70px;
-      }
-      50%{
-        left:75vw; top: 75px;
-      }
-      60%{
-        left:80vw; top: 80px;
-      }
-      70%{
-        left:85vw; top: 85px;
-      }
-      80%{
-        left:90vw; top: 90px;
-      }
-      90%{
-        left: 95vw; top: 95px;
-      } */
-      100%{
-        transform: rotate(360deg) translateX(210px) rotate(-360deg);
-        z-index: -1;
-      }
-    }
+  80%{
+      z-index: 3;
+      border-color: transparent;
 
-.marsOrbit{
-    left:50px; top: 50px;
-    position: absolute;
-    animation-duration: 3.65s;
-      animation-timing-function: linear;
-      animation-delay: 0s;
-      animation-iteration-count: infinite;
-      animation-direction: normal;
-      animation-fill-mode: none;
-      animation-play-state: running;
-      animation-name: maOrbit;
   }
-  @keyframes maOrbit{
-      0%{
-        transform: rotate(0deg) translateX(210px) rotate(0deg);
-      }
-      /* 10%{
-        left: 51vw; top: 51px;
-      }
-      20%{
-        left:52vw; top: 52px;
-      }
-      30%{
-        left:53vw; top: 53px;
-      }
-      40%{
-        left:70vw; top: 70px;
-      }
-      50%{
-        left:75vw; top: 75px;
-      }
-      60%{
-        left:80vw; top: 80px;
-      }
-      70%{
-        left:85vw; top: 85px;
-      }
-      80%{
-        left:90vw; top: 90px;
-      }
-      90%{
-        left: 95vw; top: 95px;
-      } */
-      100%{
-        transform: rotate(360deg) translateX(210px) rotate(-360deg);
-        z-index: -1;
-      }
-    }
+  100%{
+      z-index: 3;
+  }
+}
+.earthrotate {
+  width: 100%;
+  height: 100%;
+  animation: circle 8.5s infinite linear;    
+  transform-origin: 50% 50%;
+}
+.earthcounterrotate {
+  width: 50px;
+  height: 50px;
+  animation: ccircle 8.5s infinite linear;    
+}
+.earthinnerCube{
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  /* background-color: red; */
+  display: block;
+  transform: scaleX(0.33);
+}
 
+.ellipseMars  {
+  width: 45%;
+  height: auto;
+  transform: scaleX(3);
+  /* background-color: orange; */
+  left: calc(50vw - 15%);
+  top: calc(50vh - 45%);
+  position: relative;
+  border-radius: 50%;
+  animation: zindMars 10s infinite linear;
+}
+@keyframes zindMars{
+  0%{
+      z-index: -4;
+      border-color: aliceblue;
 
-    .jupiterOrbit{
-      left:50px; top: 50px;
-      position: absolute;
-      animation-duration: 3.65s;
-        animation-timing-function: linear;
-        animation-delay: 0s;
-        animation-iteration-count: infinite;
-        animation-direction: normal;
-        animation-fill-mode: none;
-        animation-play-state: running;
-        animation-name: jOrbit;
-    }
-    @keyframes jOrbit{
-        0%{
-          transform: rotate(0deg) translateX(210px) rotate(0deg);
-        }
-        /* 10%{
-          left: 51vw; top: 51px;
-        }
-        20%{
-          left:52vw; top: 52px;
-        }
-        30%{
-          left:53vw; top: 53px;
-        }
-        40%{
-          left:70vw; top: 70px;
-        }
-        50%{
-          left:75vw; top: 75px;
-        }
-        60%{
-          left:80vw; top: 80px;
-        }
-        70%{
-          left:85vw; top: 85px;
-        }
-        80%{
-          left:90vw; top: 90px;
-        }
-        90%{
-          left: 95vw; top: 95px;
-        } */
-        100%{
-          transform: rotate(360deg) translateX(210px) rotate(-360deg);
-        }
-      }
+  }
+  40%{background-color: transparent;
+      z-index: -4;
+  }
+  80%{
+      z-index: 4;
+      border-color: transparent;
 
+  }
+  100%{
+      z-index: 4;
+  }
+}
+.marsrotate {
+  width: 100%;
+  height: 100%;
+  animation: circle 10s infinite linear;    
+  transform-origin: 50% 50%;
+}
+.marscounterrotate {
+  width: 50px;
+  height: 50px;
+  animation: ccircle 10s infinite linear;    
+}
+.marsinnerCube{
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  /* background-color: red; */
+  display: block;
+  transform: scaleX(0.33);
+}
 
-      .saturnOrbit{
-        left:50px; top: 50px;
-        position: absolute;
-        animation-duration: 3.65s;
-          animation-timing-function: linear;
-          animation-delay: 0s;
-          animation-iteration-count: infinite;
-          animation-direction: normal;
-          animation-fill-mode: none;
-          animation-play-state: running;
-          animation-name: sOrbit;
-      }
-      @keyframes sOrbit{
-          0%{
-            transform: rotate(0deg) translateX(210px) rotate(0deg);
-          }
-          /* 10%{
-            left: 51vw; top: 51px;
-          }
-          20%{
-            left:52vw; top: 52px;
-          }
-          30%{
-            left:53vw; top: 53px;
-          }
-          40%{
-            left:70vw; top: 70px;
-          }
-          50%{
-            left:75vw; top: 75px;
-          }
-          60%{
-            left:80vw; top: 80px;
-          }
-          70%{
-            left:85vw; top: 85px;
-          }
-          80%{
-            left:90vw; top: 90px;
-          }
-          90%{
-            left: 95vw; top: 95px;
-          } */
-          100%{
-            transform: rotate(360deg) translateX(210px) rotate(-360deg);
-          }
-        }
+.ellipseJupiter  {
+  width: 50%;
+  height: auto;
+  transform: scaleX(3);
+  /* background-color: yellow; */
+  left: calc(50vw - 15%);
+  top: calc(50vh - 50%);
+  position: relative;
+  border-radius: 50%;
+  animation: zindJupiter 17s infinite linear; 
+}
+@keyframes zindJupiter{
+  0%{
+      z-index: -5;
+      border-color: aliceblue;
 
+  }
+  40%{background-color: transparent;
+      z-index: -5;
+  }
+  80%{
+      z-index: 5;
+      border-color: transparent;
 
-        .uranusOrbit{
-          left:50px; top: 50px;
-          position: absolute;
-          animation-duration: 3.65s;
-            animation-timing-function: linear;
-            animation-delay: 0s;
-            animation-iteration-count: infinite;
-            animation-direction: normal;
-            animation-fill-mode: none;
-            animation-play-state: running;
-            animation-name: urOrbit;
-        }
-        @keyframes urOrbit{
-            0%{
-              transform: rotate(0deg) translateX(210px) rotate(0deg);
-            }
-            /* 10%{
-              left: 51vw; top: 51px;
-            }
-            20%{
-              left:52vw; top: 52px;
-            }
-            30%{
-              left:53vw; top: 53px;
-            }
-            40%{
-              left:70vw; top: 70px;
-            }
-            50%{
-              left:75vw; top: 75px;
-            }
-            60%{
-              left:80vw; top: 80px;
-            }
-            70%{
-              left:85vw; top: 85px;
-            }
-            80%{
-              left:90vw; top: 90px;
-            }
-            90%{
-              left: 95vw; top: 95px;
-            } */
-            100%{
-              transform: rotate(360deg) translateX(210px) rotate(-360deg);
-            }
-          }
+  }
+  100%{
+      z-index: 5;
+  }
+}
+.jupiterrotate {
+  width: 100%;
+  height: 100%;
+  animation: circle 17s infinite linear;    
+  transform-origin: 50% 50%;
+}
+.jupitercounterrotate {
+  width: 50px;
+  height: 50px;
+  animation: ccircle 17s infinite linear;    
+}
+.jupiterinnerCube{
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+  transform: scaleX(0.33);
+}
 
+.ellipseSaturn  {
+  width: 55%;
+  height: auto;
+  transform: scaleX(3);
+  /* background-color: purple; */
+  left: calc(50vw - 15%);
+  top: calc(50vh - 55%);
+  position: relative;
+  border-radius: 50%;
+  animation: zindSaturn 25s infinite linear; 
+}
+@keyframes zindSaturn{
+  0%{
+      z-index: -6;
+      border-color: aliceblue;
 
+  }
+  40%{background-color: transparent;
+      z-index: -6;
+  }
+  80%{
+      z-index: 6;
+      border-color: transparent;
 
-          .neptuneOrbit{
-            left:50px; top: 50px;
-            position: absolute;
-            animation-duration: 3.65s;
-              animation-timing-function: linear;
-              animation-delay: 0s;
-              animation-iteration-count: infinite;
-              animation-direction: normal;
-              animation-fill-mode: none;
-              animation-play-state: running;
-              animation-name: nepOrbit;
-          }
-          @keyframes nepOrbit{
-              0%{
-                transform: rotate(0deg) translateX(210px) rotate(0deg);
-              }
-              /* 10%{
-                left: 51vw; top: 51px;
-              }
-              20%{
-                left:52vw; top: 52px;
-              }
-              30%{
-                left:53vw; top: 53px;
-              }
-              40%{
-                left:70vw; top: 70px;
-              }
-              50%{
-                left:75vw; top: 75px;
-              }
-              60%{
-                left:80vw; top: 80px;
-              }
-              70%{
-                left:85vw; top: 85px;
-              }
-              80%{
-                left:90vw; top: 90px;
-              }
-              90%{
-                left: 95vw; top: 95px;
-              } */
-              100%{
-                transform: rotate(360deg) translateX(210px) rotate(-360deg);
-              }
-            }
+  }
+  100%{
+      z-index: 6;
+  }
+}
+.saturnrotate {
+  width: 100%;
+  height: 100%;
+  animation: circle 25s infinite linear;    
+  transform-origin: 50% 50%;
+}
+.saturncounterrotate {
+  width: 50px;
+  height: 50px;
+  animation: ccircle 25s infinite linear;    
+}
+.saturninnerCube{
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+  transform: scaleX(0.33);
+}
 
+.ellipseUranus {
+  width: 60%;
+  height: auto;
+  transform: scaleX(3);
+  /* background-color: lightblue; */
+  left: calc(50vw - 15%);
+  top: calc(50vh - 60%);
+  position: relative;
+  border-radius: 50%;
+  animation: zindUranus 35s infinite linear; 
+}
+@keyframes zindUranus{
+  0%{
+      z-index: -7;
+      border-color: aliceblue;
 
-            .plutoOrbit{
-              left:50px; top: 50px;
-              position: absolute;
-              animation-duration: 3.65s;
-                animation-timing-function: linear;
-                animation-delay: 0s;
-                animation-iteration-count: infinite;
-                animation-direction: normal;
-                animation-fill-mode: none;
-                animation-play-state: running;
-                animation-name: pluOrbit;
-            }
-            @keyframes pluOrbit{
-                0%{
-                  transform: rotate(0deg) translateX(210px) rotate(0deg);
-                }
-                /* 10%{
-                  left: 51vw; top: 51px;
-                }
-                20%{
-                  left:52vw; top: 52px;
-                }
-                30%{
-                  left:53vw; top: 53px;
-                }
-                40%{
-                  left:70vw; top: 70px;
-                }
-                50%{
-                  left:75vw; top: 75px;
-                }
-                60%{
-                  left:80vw; top: 80px;
-                }
-                70%{
-                  left:85vw; top: 85px;
-                }
-                80%{
-                  left:90vw; top: 90px;
-                }
-                90%{
-                  left: 95vw; top: 95px;
-                } */
-                100%{
-                  transform: rotate(360deg) translateX(210px) rotate(-360deg);
-                }
-              }
+  }
+  40%{background-color: transparent;
+      z-index: -7;
+  }
+  80%{
+      z-index: 7;
+      border-color: transparent;
+
+  }
+  100%{
+      z-index: 7;
+  }
+}
+.uranusrotate {
+  width: 100%;
+  height: 100%;
+  animation: circle 35s infinite linear;    
+  transform-origin: 50% 50%;
+}
+.uranuscounterrotate {
+  width: 50px;
+  height: 50px;
+  animation: ccircle 35s infinite linear;    
+}
+.uranusinnerCube{
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+  transform: scaleX(0.33);
+}
+
+.ellipseNeptune {
+  width: 65%;
+  height: auto;
+  transform: scaleX(3);
+  /* background-color: darkblue; */
+  left: calc(50vw - 15%);
+  top: calc(50vh - 65%);
+  position: relative;
+  border-radius: 50%;
+  animation: zindNeptune 41s infinite linear; 
+}
+@keyframes zindNeptune{
+  0%{
+      z-index: -8;
+      border-color: aliceblue;
+
+  }
+  40%{background-color: transparent;
+      z-index: -8;
+  }
+  80%{
+      z-index: 8;
+      border-color: transparent;
+
+  }
+  100%{
+      z-index: 8;
+  }
+}
+.neptunerotate {
+  width: 100%;
+  height: 100%;
+  animation: circle 41s infinite linear;    
+  transform-origin: 50% 50%;
+}
+.neptunecounterrotate {
+  width: 50px;
+  height: 50px;
+  animation: ccircle 41s infinite linear;    
+}
+.neptuneinnerCube{
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+  transform: scaleX(0.33);
+}
+
+.ellipsePluto {
+  width: 70%;
+  height: auto;
+  transform: scaleX(3);
+  /* background-color: darkblue; */
+  left: calc(50vw - 15%);
+  top: calc(50vh - 70%);
+  position: relative;
+  border-radius: 50%;
+  animation: zindPluto 50s infinite linear; 
+}
+@keyframes zindPluto{
+  0%{
+      z-index: -9;
+      border-color: aliceblue;
+
+  }
+  40%{background-color: transparent;
+      z-index: -9;
+  }
+  80%{
+      z-index: 9;
+      border-color: transparent;
+  }
+  100%{
+      z-index: 9;
+  }
+}
+.plutorotate {
+  width: 100%;
+  height: 100%;
+  animation: circle 50s infinite linear;    
+  transform-origin: 50% 50%;
+}
+.plutocounterrotate {
+  width: 50px;
+  height: 50px;
+  animation: ccircle 50s infinite linear;    
+}
+.plutoinnerCube{
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+  transform: scaleX(0.33);
+}

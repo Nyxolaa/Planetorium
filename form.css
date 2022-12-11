@@ -47,3 +47,22 @@
     background-color: brown;
     color: cadetblue;
 }
+
+.astronaut{
+    filter:
+    drop-shadow(0 0 6px whitesmoke)
+    drop-shadow(-1px 0 6px darkgray)
+    drop-shadow(0 -1px 8px gray)
+    drop-shadow(0 0 15px transparent);
+
+    transform: translateY(-50%);
+}
+.astronaut:hover{
+    filter:
+    drop-shadow(0 0 1px red)
+    drop-shadow(-1px 0 3px red)
+    drop-shadow(0 -1px 4px red)
+    drop-shadow(0 0 5px orange);
+
+    transform: translateY(-50%);
+}
