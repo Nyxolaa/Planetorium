@@ -5,6 +5,8 @@ body{
 }
 
 .astronaut{
+    font-size: 0px;
+    color: aliceblue;
     width: 50px;
     height: auto;
     top: 50%;
@@ -24,6 +26,7 @@ body{
     }
 }
 .astronaut:hover{
+    font-size: 36px;
     filter:
     drop-shadow(0 0 6px whitesmoke)
     drop-shadow(-1px 0 6px darkgray)
@@ -31,6 +34,18 @@ body{
     drop-shadow(0 0 15px transparent);
 
     transform: translateY(-50%);
+}
+
+.txtstyle{
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-family: comic sans ms;
+    font-size: large;
 }
 
 .solarSystem{
